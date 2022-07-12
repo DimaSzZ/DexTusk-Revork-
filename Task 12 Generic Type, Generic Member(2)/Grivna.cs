@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_12_Generic_Type__Generic_Member_2_
+﻿namespace Task_12_Generic_Type__Generic_Member_2_
 {
-    internal class Grivna : Exchange
+    internal class Grivna 
     {
-        public Grivna()
-        {
-            Cur = 29.8;
-        }
+        public double Curs { get; set; } = 29.8;
     }
 }

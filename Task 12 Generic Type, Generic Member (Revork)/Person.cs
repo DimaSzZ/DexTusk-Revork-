@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_9_Generic_Type__Generic_Member
+﻿namespace Task_9_Generic_Type__Generic_Member
 {
     internal class Person
     {
@@ -12,11 +6,5 @@ namespace Task_9_Generic_Type__Generic_Member
         public string? Name { get; set; }
         public int Age { get; set; }
 
-        public Person(int id, string name, int age)
-        {
-            Id = id;
-            Name = name;
-            Age = age;
-        }
     }
 }

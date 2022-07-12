@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_12_Generic_Type__Generic_Member_2_
+﻿namespace Task_12_Generic_Type__Generic_Member_2_
 {
-    internal class Lei : Exchange
+    internal class Lei 
     {
-        public Lei()
-        {
-            Cur = 19.22;
-        }
+        public double Curs { get; set; } = 19.22;
     }
 }

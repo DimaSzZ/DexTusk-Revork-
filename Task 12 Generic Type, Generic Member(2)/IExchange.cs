@@ -2,10 +2,9 @@
 {
     internal interface IExchange
     {
-        //public Exchange Convertation<T,B>(double money, T value, B value2 )
-        //{
-            
-
-        //}
+        public double Convertation<T, B>(double money, T valueIn, B valueOut)
+        {
+            return 0;
+        }
     }
 }
