@@ -1,31 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Task_8_List__Dictionary
+﻿namespace Task_8_List__Dictionary
 {
     internal class Client
     {
-        string? fio;
+        private string? _fio;
         public string? Fio
         {
-            get => fio;
+            get => _fio;
             set
             {
-                if (value == "1") { fio = "Саша"; }
-                else if (value == "2") { fio = "Женя"; }
-                else { fio = "Алекс"; }
+                _fio = value switch
+                {
+                    "1" => "Саша",
+                    "2" => "Женя",
+                    "3" => "Кирил",
+                    "4" => "Максим",
+                    _ => "Алекс"
+                };
             }
         }
         public string IdPassport { get; set; }
-        public List<Currency_Account> Currency_List = new List<Currency_Account>();
-        public Client(string FIO,double cash)
+        public double Cash { get; set; }
+        public Client(string fio,double cash)
         {
-            Fio = FIO;
-            Currency_List.Add(new Dol(cash));
-            IdPassport = Convert.ToString(GetHashCode());
+            Fio = fio;
+            Cash = cash;
+            IdPassport = Convert.ToString(HashCode.Combine(Fio,Cash));
         }
         
     }
